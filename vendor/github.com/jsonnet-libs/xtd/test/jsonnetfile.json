@@ -4,11 +4,11 @@
     {
       "source": {
         "git": {
-          "remote": "https://github.com/grafana/grafonnet.git",
-          "subdir": "gen/grafonnet-latest"
+          "remote": "https://github.com/jsonnet-libs/testonnet.git",
+          "subdir": ""
         }
       },
-      "version": "main"
+      "version": "master"
     }
   ],
   "legacyImports": true
