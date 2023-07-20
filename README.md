@@ -36,4 +36,18 @@ First of all, you need to have these tools up and running before starting:
     + g.dashboard.withDescription('Example dashboard built with Grafonnet')
     ```
 
+4. Create a `dashboards.libsonnet` file with the main definition:
+
+    ```jsonnet
+    {
+      grafanaDashboards+:: {
+        'example.json': (import 'example.jsonnet'),
+      },
+    }
+    ```
+
+    *NOTE: It basically imports the example dashboard we defined in the previous step*
+
+
+
 
