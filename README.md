@@ -12,6 +12,7 @@ First of all, you need to have these tools up and running before starting:
 
   - [Jsonnet](https://jsonnet.org/) (*[go-jsonnet](https://github.com/google/go-jsonnet#installation-instructions)* flavor)
   - [jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler#install)
+  - [Grafana Cloud](https://grafana.com/products/cloud/) instance (*with a [service account token](https://grafana.com/docs/grafana/latest/administration/service-accounts/#service-account-tokens) with enough permissions - e.g. admin*)
 
 ### Step by step
 
@@ -47,6 +48,11 @@ First of all, you need to have these tools up and running before starting:
     ```
 
     *NOTE: It basically imports the example dashboard we defined in the previous step*
+
+5. Set up [Grafana auth for Grizzly](https://grafana.github.io/grizzly/authentication/#grafana-itself) as [Actions secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets):
+
+    - `GRAFANA_URL` with the root url of your instance
+    - `GRAFANA_TOKEN` with your service account token
 
 
 
