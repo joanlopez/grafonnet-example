@@ -17,13 +17,23 @@ First of all, you need to have these tools up and running before starting:
 
 1. Initialize a new project:
 
-    `jb init`
+    ```sh
+    jb init
+    ```
 
 2. Add Grafonnet as dependency:
 
-    `jb install github.com/grafana/grafonnet/gen/grafonnet-latest@main`
+    ```sh
+    jb install github.com/grafana/grafonnet/gen/grafonnet-latest@main
+    ```
 
+3. Create an `example.jsonnet` file with a basic dashboard:
 
-
+    ```jsonnet
+    local g = import 'github.com/grafana/grafonnet/gen/grafonnet-latest/main.libsonnet';
+    
+    g.dashboard.new('Grafonnet example')
+    + g.dashboard.withDescription('Example dashboard built with Grafonnet')
+    ```
 
 
