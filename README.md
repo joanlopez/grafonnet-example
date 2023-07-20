@@ -8,15 +8,15 @@ thanks to [Grizzly](https://github.com/grafana/grizzly) and [GitHub Actions](htt
 
 ## What's here?
 
-- **An [example dashboard](./example.jsonnet)** written in [Jsonnet](https://jsonnet.org/) with [Grafonnet](https://github.com/grafana/grafonnet).
-  - **Are you willing to extend it?** Find [here](https://grafana.github.io/grafonnet/API/dashboard/index.html) the Grafonnet API for dashboards.
-- An example of **[how to use Grizzle to push dashboards to a Grafana instance](./.github/workflows/deploy.yml#L20)**.
-  - **Would you like to learn more about Grizzly** Find [here](https://grafana.github.io/grizzly/) the docs.
-- An example of **[how to continuously deploy Grafonnet code to a Grafana instance](./.github/workflows/deploy.yml)**.
+- An **[example dashboard](./example.jsonnet)** written in [Jsonnet](https://jsonnet.org/) with [Grafonnet](https://github.com/grafana/grafonnet).
+  - Are you willing to extend it? Find [here](https://grafana.github.io/grafonnet/API/dashboard/index.html) the Grafonnet API for dashboards.
+- An example of how to **[use Grizzle to push dashboards to a Grafana instance](./.github/workflows/deploy.yml#L20)**.
+  - Would you like to learn more about Grizzly? Find [here](https://grafana.github.io/grizzly/) the docs.
+- An example of how to **[continuously deploy Grafonnet code to a Grafana instance](./.github/workflows/deploy.yml)** with GitHub Actions.
 
 ## Looking for building your own example?
 
-If you're a [learning-by-doing](https://en.wikipedia.org/wiki/Learning-by-doing) kind of person, you can follow the steps below to build your own example.
+**If you're a [learning-by-doing](https://en.wikipedia.org/wiki/Learning-by-doing) kind of person,** you can follow the steps below to build your own example.
 
 ### Pre-requisites
 
@@ -97,6 +97,6 @@ First of all, you need to have these tools up and running before starting:
 
 ## Contribute
 
-**Have you detected a typo or something incorrect and you are willing to contribute?** 
+Have you detected a typo or something incorrect, and you are **willing to contribute?** 
 
 Please, [open a pull request](https://github.com/joanlopez/grafonnet-example/compare), and I'll be happy to review it.
