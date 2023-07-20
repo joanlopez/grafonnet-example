@@ -1,0 +1,21 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: grafana/grizzly:0.2.1-amd64
+      env:
+        GRAFANA_URL: ${{ secrets.GRAFANA_URL }}
+        GRAFANA_TOKEN: ${{ secrets.GRAFANA_TOKEN }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Deploy dashboards
+        run: grr apply dashboards.libsonnet -l debug
+

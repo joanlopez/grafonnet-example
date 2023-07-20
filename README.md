@@ -54,6 +54,35 @@ First of all, you need to have these tools up and running before starting:
     - `GRAFANA_URL` with the root url of your instance
     - `GRAFANA_TOKEN` with your service account token
 
+6. Set up GitHub Actions to automatically `grr apply` your changes on every push to `main`:
 
+    ```yaml
+    # .github/workflows/deploy.yml
 
+    name: deploy
+    
+    on:
+      push:
+        branches:
+          - main
+    
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        container:
+          image: grafana/grizzly:0.2.1-amd64
+          env:
+            GRAFANA_URL: ${{ secrets.GRAFANA_URL }}
+            GRAFANA_TOKEN: ${{ secrets.GRAFANA_TOKEN }}
+        steps:
+          - name: Check out code
+            uses: actions/checkout@v3
+          - name: Deploy dashboards
+            run: grr apply dashboards.libsonnet -l debug
+    ```
 
+7. Push new changes on `example.jsonnet` to `main` and enjoy!
+
+## Contribute
+
+**Have you detected a typo or something incorrect and you are willing to contribute?** Please, [open a pull request](https://github.com/joanlopez/grafonnet-example/compare) and I'll be happy to review it.
